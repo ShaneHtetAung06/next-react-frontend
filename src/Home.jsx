@@ -18,7 +18,7 @@ import { useContext, useEffect } from "react";
 
 import { UserContext } from "./context/UserContext";
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL?.replace(/\/$/, "");
 
 export default function Home() {
   const navigate = useNavigate();
